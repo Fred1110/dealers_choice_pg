@@ -7,8 +7,7 @@ const syncAndSeed = async() => {
   DROP TABLE IF EXISTS "Locations";
   CREATE TABLE "Locations"(
     id INTEGER PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    locations_id INTEGER REFERENCES "Locations"(id)
+    name VARCHAR(100) NOT NULL
   );
   CREATE TABLE "Scotch"(
     id INTEGER PRIMARY KEY,
@@ -37,4 +36,4 @@ const syncAndSeed = async() => {
 module.exports = {
   client,
   syncAndSeed
-}
+};
